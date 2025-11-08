@@ -49,7 +49,7 @@ const stocking = [[5, 3],
 
 result = stocking
   .flat()
-  .reduce((r, n) => r + n,0);
+  .reduce((r, n) => r + n, 0);
 
 console.log(result, '5. Candy Jar Stocking');
 
@@ -59,5 +59,15 @@ const notes = [["mi", "fa", "so"],
 ["do", "mi"],
 ["fa"]];
 
-result = notes.some((x)=>x.includes('do'));
+result = notes.some((x) => x.includes('do'));
 console.log(result, '6. Music Rehearsal Notes');
+
+// 7. Weather Sensor Validation
+
+const temperatures = [[22, 23],
+[25, 24, 22],
+[29]];
+result = temperatures.every(
+  (x) => x.every(x => x < 32)
+);
+console.log(result, '7. Weather Sensor Validation');
