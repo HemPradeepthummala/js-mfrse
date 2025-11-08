@@ -21,13 +21,13 @@ const pushIfNotIncludes = (result, x) => {
 result = log
   .flat()
   .reduce(pushIfNotIncludes, []);
-console.log(result,  '2. Stargazing Log');
+console.log(result, '2. Stargazing Log');
 
 // 3. Birdwatching Duplicate Removal
 
 const birds = ["sparrow", "crow", "sparrow", "eagle", "crow"];
 result = birds.reduce(pushIfNotIncludes, []);
-console.log(result,'3. Birdwatching Duplicate Removal');
+console.log(result, '3. Birdwatching Duplicate Removal');
 
 // 4. Classroom Attendance Check
 
@@ -40,3 +40,15 @@ result = attendenceLog
   .reduce(pushIfNotIncludes, []);
 
 console.log(result, '4. Classroom Attendance Check');
+
+// 5. Candy Jar Stocking
+
+const stocking = [[5, 3],
+[2],
+[4, 1]];
+
+result = stocking
+  .flat()
+  .reduce((r, n) => r + n,0);
+
+console.log(result, '5. Candy Jar Stocking');
