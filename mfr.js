@@ -29,3 +29,14 @@ const birds = ["sparrow", "crow", "sparrow", "eagle", "crow"];
 result = birds.reduce(pushIfNotIncludes, []);
 console.log(result,'3. Birdwatching Duplicate Removal');
 
+// 4. Classroom Attendance Check
+
+const attendenceLog = [["Asha", "Ravi", "Neel"],
+["Ravi"],
+["Asha", "Meera"]];
+
+result = attendenceLog
+  .flat()
+  .reduce(pushIfNotIncludes, []);
+
+console.log(result, '4. Classroom Attendance Check');
