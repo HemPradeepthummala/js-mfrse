@@ -71,3 +71,15 @@ result = temperatures.every(
   (x) => x.every(x => x < 32)
 );
 console.log(result, '7. Weather Sensor Validation');
+
+// 8. Fitness Tracker Miles
+
+const runnerLog = [[2, 3, 2],
+[4],
+[1, 1]];
+
+result = runnerLog
+  .flat()
+  .reduce((r, n) => r + n, 0);
+
+console.log(result,'8. Fitness Tracker Miles');
