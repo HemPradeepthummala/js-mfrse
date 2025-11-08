@@ -52,3 +52,12 @@ result = stocking
   .reduce((r, n) => r + n,0);
 
 console.log(result, '5. Candy Jar Stocking');
+
+// 6. Music Rehearsal Notes
+
+const notes = [["mi", "fa", "so"],
+["do", "mi"],
+["fa"]];
+
+result = notes.some((x)=>x.includes('do'));
+console.log(result, '6. Music Rehearsal Notes');
