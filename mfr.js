@@ -11,7 +11,7 @@ const log = [["Orion", "Leo"],
 ["Taurus"],
 ["Orion", "Gemini"]];
 
-const isNotIncludes = (result, x) => {
+const pushIfNotIncludes = (result, x) => {
   if (!result.includes(x)) {
     result.push(x);
   }
@@ -20,5 +20,12 @@ const isNotIncludes = (result, x) => {
 
 result = log
   .flat()
-  .reduce(isNotIncludes, []);
-console.log(result)
+  .reduce(pushIfNotIncludes, []);
+console.log(result,  '2. Stargazing Log');
+
+// 3. Birdwatching Duplicate Removal
+
+const birds = ["sparrow", "crow", "sparrow", "eagle", "crow"];
+result = birds.reduce(pushIfNotIncludes, []);
+console.log(result,'3. Birdwatching Duplicate Removal');
+
