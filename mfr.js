@@ -139,3 +139,11 @@ const animals = ["deer", "deer", "rabbit", "deer"];
 cString = 'deer';
 console.log(`${++problem}.`,
   reduceToValue(animals, incrementIf, 0));
+
+// 16. Study Group Completion
+
+const chapters = [[1, 2],
+[3],
+[2, 4, 1]];
+console.log(`${++problem}.`,
+  reduceNestedArray(chapters, pushIfNotIncludes, []));
