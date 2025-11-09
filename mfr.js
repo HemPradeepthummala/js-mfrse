@@ -1,4 +1,4 @@
-const reduceToValue = function (input, predicate, initial) {
+const reduceToValue = function (input, predicate, initial, conditioned) {
   return input.reduce(predicate, initial);
 }
 
@@ -17,11 +17,11 @@ const doesEverySatisfy = function (input, predicate) {
 // 1. Festival Ribbon count
 let problem = 0;
 const ribbons = ["red", "blue", "red", "green", "red", "blue", "blue"];
+let cString = 'blue'
+const incrementIf = (count, string) =>
+  string === cString ? count + 1 : count;
 
-const incrementIfBlue = (count, string) =>
-  string === 'blue' ? count + 1 : count;
-
-console.log(`${++problem}.`, reduceToValue(ribbons, incrementIfBlue, 0));
+console.log(`${++problem}.`, reduceToValue(ribbons, incrementIf, 0, 'blue'));
 
 // 2. Stargazing Log
 
