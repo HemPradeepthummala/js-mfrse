@@ -100,3 +100,11 @@ const booksLog = ["Dune", "Dune", "Foundation", "Dune"];
 cString = 'Dune';
 console.log(`${++problem}.`,
   reduceToValue(booksLog, incrementIf, 0));
+
+// 11. Lunchbox Ingredient Inventory
+
+const ingredients = [["rice", "lentils"],
+["rice"],
+["curd", "lentils"]];
+console.log(`${++problem}.`,
+  reduceNestedArray(ingredients, pushIfNotIncludes, []));
