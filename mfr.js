@@ -14,6 +14,8 @@ const doesEverySatisfy = function (input, predicate) {
   return input.every(predicate);
 }
 
+const sum = (x, y) => x + y;
+
 // 1. Festival Ribbon count
 let problem = 0;
 const ribbons = ["red", "blue", "red", "green", "red", "blue", "blue"];
@@ -58,7 +60,7 @@ console.log(`${++problem}.`,
 const stocking = [[5, 3],
 [2],
 [4, 1]];
-console.log(`${++problem}.`, reduceNestedArray(stocking, (x, y) => x + y, 0));
+console.log(`${++problem}.`, reduceNestedArray(stocking, sum, 0));
 
 
 // 6. Music Rehearsal Notes
@@ -84,7 +86,7 @@ console.log(`${++problem}.`, doesEverySatisfy(temperatures, (x) => x.every((x) =
 const runnerLog = [[2, 3, 2],
 [4],
 [1, 1]];
-console.log(`${++problem}.`, reduceNestedArray(runnerLog, (x, y) => x + y, 0));
+console.log(`${++problem}.`, reduceNestedArray(runnerLog, sum, 0));
 
 // 9. Art Workshop Color Variety
 
@@ -116,3 +118,9 @@ const tunes = [["la", "la"],
 ["so", "la"]];
 console.log(`${++problem}.`,
   doesSomeSatisfy(notes, (x) => x.includes('so')));
+
+const weights = [[4, 6],
+[2, 3, 1],
+[5]];
+reduceNestedArray(weights, pushIfNotIncludes, []);
+
