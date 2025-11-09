@@ -214,3 +214,9 @@ const movies = [["Inception", "Dunkirk"],
 ["Inception"]];
 console.log(`${++problem}.`,
   movies.flatMap((x) => x).reduce(pushIfNotIncludes, []));
+
+// 23. Name Badge Sorting
+
+const students = ["A", "B", "A", "C", "B"];
+console.log(`${++problem}.`,
+  students.reduce(pushIfNotIncludes, []));
