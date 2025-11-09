@@ -86,6 +86,8 @@ const runnerLog = [[2, 3, 2],
 [1, 1]];
 console.log(`${++problem}.`, reduceNestedArray(runnerLog, (x, y) => x + y, 0));
 
+// 9. Art Workshop Color Variety
+
 const colors = [["blue", "yellow"],
 ["yellow", "green"],
 ["blue"]];
