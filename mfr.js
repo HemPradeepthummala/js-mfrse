@@ -220,3 +220,12 @@ console.log(`${++problem}.`,
 const students = ["A", "B", "A", "C", "B"];
 console.log(`${++problem}.`,
   students.reduce(pushIfNotIncludes, []));
+
+// 24. Ice Cream Orders
+
+const iceCreams= [["vanilla", "chocolate"],
+["strawberry"],
+["chocolate"]];
+cString = 'chocolate';
+console.log(`${++problem}.`,
+  iceCreams.flatMap((x) => x).reduce(incrementIf, 0));
