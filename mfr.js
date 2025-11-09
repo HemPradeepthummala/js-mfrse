@@ -108,3 +108,11 @@ const ingredients = [["rice", "lentils"],
 ["curd", "lentils"]];
 console.log(`${++problem}.`,
   reduceNestedArray(ingredients, pushIfNotIncludes, []));
+
+// 12. Choir Harmony Review
+
+const tunes = [["la", "la"],
+["mi"],
+["so", "la"]];
+console.log(`${++problem}.`,
+  doesSomeSatisfy(notes, (x) => x.includes('so')));
