@@ -170,3 +170,11 @@ const cranes = [[3, 2],
 [4]];
 console.log(`${++problem}.`,
   reduceNestedArray(cranes, sum, 0));
+
+// 20. Fruit Basket Inventory
+
+const fruits = [["apple", "banana"],
+["apple"],
+["apple", "orange"]];
+console.log(`${++problem}.`,
+  fruits.flatMap((x)=>x).reduce(pushIfNotIncludes,[]));
