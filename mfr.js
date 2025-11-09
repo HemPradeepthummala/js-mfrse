@@ -1,9 +1,27 @@
-// 1. Festival Ribbon count
+const reduceToValue = function (input, predicate, initial) {
+  return input.reduce(predicate, initial);
+}
 
+const reduceNestedArray = function (input, predicate, initial) {
+  return reduceToValue(input.flat(), predicate, initial);
+}
+
+const doesSomeSatisfy = function (input, predicate) {
+  return input.some(predicate);
+}
+
+const doesEverySatisfy = function (input, predicate) {
+  return input.every(predicate);
+}
+
+// 1. Festival Ribbon count
+let problem = 0;
 const ribbons = ["red", "blue", "red", "green", "red", "blue", "blue"];
-const incrementIfBlue = (count, string) => string === 'blue' ? count + 1 : count;
-let result = ribbons.reduce(incrementIfBlue, 0);
-console.log(result, "Festival Ribbon Count");
+
+const incrementIfBlue = (count, string) =>
+  string === 'blue' ? count + 1 : count;
+
+console.log(`${++problem}.`, reduceToValue(ribbons, incrementIfBlue, 0));
 
 // 2. Stargazing Log
 
@@ -18,68 +36,58 @@ const pushIfNotIncludes = (result, x) => {
   return result;
 }
 
-result = log
-  .flat()
-  .reduce(pushIfNotIncludes, []);
-console.log(result, '2. Stargazing Log');
+console.log(`${++problem}.`, reduceNestedArray(log, pushIfNotIncludes, []));
 
 // 3. Birdwatching Duplicate Removal
 
 const birds = ["sparrow", "crow", "sparrow", "eagle", "crow"];
-result = birds.reduce(pushIfNotIncludes, []);
-console.log(result, '3. Birdwatching Duplicate Removal');
+console.log(`${++problem}.`, reduceToValue(birds, pushIfNotIncludes, []));
+
 
 // 4. Classroom Attendance Check
 
 const attendenceLog = [["Asha", "Ravi", "Neel"],
 ["Ravi"],
 ["Asha", "Meera"]];
+console.log(`${++problem}.`,
+  reduceNestedArray(attendenceLog, pushIfNotIncludes, []));
 
-result = attendenceLog
-  .flat()
-  .reduce(pushIfNotIncludes, []);
-
-console.log(result, '4. Classroom Attendance Check');
 
 // 5. Candy Jar Stocking
 
 const stocking = [[5, 3],
 [2],
 [4, 1]];
+console.log(`${++problem}.`, reduceNestedArray(stocking, (x, y) => x + y, 0));
 
-result = stocking
-  .flat()
-  .reduce((r, n) => r + n, 0);
-
-console.log(result, '5. Candy Jar Stocking');
 
 // 6. Music Rehearsal Notes
 
 const notes = [["mi", "fa", "so"],
 ["do", "mi"],
 ["fa"]];
+console.log(`${++problem}.`, doesSomeSatisfy(notes, (x) => x.includes('do')));
 
-result = notes.some((x) => x.includes('do'));
-console.log(result, '6. Music Rehearsal Notes');
 
 // 7. Weather Sensor Validation
 
 const temperatures = [[22, 23],
 [25, 24, 22],
 [29]];
-result = temperatures.every(
+let result = temperatures.every(
   (x) => x.every(x => x < 32)
 );
-console.log(result, '7. Weather Sensor Validation');
+console.log(`${++problem}.`, doesEverySatisfy(temperatures, (x) => x.every((x) => x < 32)));
 
 // 8. Fitness Tracker Miles
 
 const runnerLog = [[2, 3, 2],
 [4],
 [1, 1]];
+console.log(`${++problem}.`, reduceNestedArray(runnerLog, (x, y) => x + y, 0));
 
-result = runnerLog
-  .flat()
-  .reduce((r, n) => r + n, 0);
-
-console.log(result,'8. Fitness Tracker Miles');
+const colors = [["blue", "yellow"],
+["yellow", "green"],
+["blue"]];
+console.log(`${++problem}.`,
+  reduceNestedArray(colors, pushIfNotIncludes, []));
