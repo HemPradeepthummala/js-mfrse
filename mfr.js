@@ -177,4 +177,12 @@ const fruits = [["apple", "banana"],
 ["apple"],
 ["apple", "orange"]];
 console.log(`${++problem}.`,
-  fruits.flatMap((x)=>x).reduce(pushIfNotIncludes,[]));
+  fruits.flatMap((x) => x).reduce(pushIfNotIncludes, []));
+
+// 21. Classroom Pen Distribution
+
+const pens = [[2, 3],
+[1],
+[3, 2]];
+console.log(`${++problem}.`,
+  pens.flatMap((x) => x).reduce(sum, 0));
