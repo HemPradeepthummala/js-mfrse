@@ -162,3 +162,11 @@ const usageLog = [[1, 2, 1],
 [2]];
 console.log(`${++problem}.`,
   reduceNestedArray(usageLog, sum, 0));
+
+// 19. Paper Crane Making
+
+const cranes = [[3, 2],
+[1],
+[4]];
+console.log(`${++problem}.`,
+  reduceNestedArray(cranes, sum, 0));
