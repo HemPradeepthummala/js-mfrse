@@ -147,3 +147,10 @@ const chapters = [[1, 2],
 [2, 4, 1]];
 console.log(`${++problem}.`,
   reduceNestedArray(chapters, pushIfNotIncludes, []));
+
+// 17. Dance Class Steps 
+
+const sequences = [["step", "tap"],
+["turn", "step"]];
+console.log(`${++problem}.`,
+  doesSomeSatisfy(sequences, (x) => x.includes('turn')));
