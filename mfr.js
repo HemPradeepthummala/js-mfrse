@@ -93,3 +93,10 @@ const colors = [["blue", "yellow"],
 ["blue"]];
 console.log(`${++problem}.`,
   reduceNestedArray(colors, pushIfNotIncludes, []));
+
+// 10. Library Return Counter
+
+const booksLog = ["Dune", "Dune", "Foundation", "Dune"];
+cString = 'Dune';
+console.log(`${++problem}.`,
+  reduceToValue(booksLog, incrementIf, 0));
