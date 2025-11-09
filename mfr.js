@@ -204,5 +204,13 @@ const wordsWithA = x => {
   return splits.reduce(pushIfStarts, [])
 }
 
-const result = sentences.flatMap(wordsWithA);
-console.log(result)
+console.log(`${++problem}.`,
+  sentences.flatMap(wordsWithA));
+
+// 22. Movie Marathon Titles
+
+const movies = [["Inception", "Dunkirk"],
+["Interstellar"],
+["Inception"]];
+console.log(`${++problem}.`,
+  movies.flatMap((x) => x).reduce(pushIfNotIncludes, []));
