@@ -154,3 +154,11 @@ const sequences = [["step", "tap"],
 ["turn", "step"]];
 console.log(`${++problem}.`,
   doesSomeSatisfy(sequences, (x) => x.includes('turn')));
+
+// 18. Garden Watering Amount
+
+const usageLog = [[1, 2, 1],
+[3],
+[2]];
+console.log(`${++problem}.`,
+  reduceNestedArray(usageLog, sum, 0));
