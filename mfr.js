@@ -1,9 +1,9 @@
-const reduceToValue = function (input, predicate, initial, conditioned) {
-  return input.reduce(predicate, initial);
+const reduceToValue = function (input, predicate, initial, cString) {
+  return input.reduce(predicate, initial, cString);
 }
 
-const reduceNestedArray = function (input, predicate, initial) {
-  return reduceToValue(input.flat(), predicate, initial);
+const reduceNestedArray = function (input, predicate, initial, cString) {
+  return reduceToValue(input.flat(), predicate, initial, cString);
 }
 
 const doesSomeSatisfy = function (input, predicate) {
@@ -20,7 +20,7 @@ const sum = (x, y) => x + y;
 let problem = 0;
 const ribbons = ["red", "blue", "red", "green", "red", "blue", "blue"];
 let cString = 'blue'
-const incrementIf = (count, string) =>
+const incrementIf = (count, string, _, __, cString) =>
   string === cString ? count + 1 : count;
 
 console.log(`${++problem}.`, reduceToValue(ribbons, incrementIf, 0, 'blue'));
@@ -127,3 +127,8 @@ const weights = [[4, 6],
 console.log(`${++problem}.`,
   reduceNestedArray(weights, sum, 0));
 
+// 14. Post Office Parcel Record
+
+const record = ["small", "large", "medium", "small"];
+console.log(`${++problem}.`,
+  reduceToValue(record, pushIfNotIncludes, []));
