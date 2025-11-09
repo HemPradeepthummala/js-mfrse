@@ -1,5 +1,5 @@
-const reduceToValue = function (input, predicate, initial, cString) {
-  return input.reduce(predicate, initial, cString);
+const reduceToValue = function (input, predicate, initial) {
+  return input.reduce(predicate, initial);
 }
 
 const reduceNestedArray = function (input, predicate, initial, cString) {
@@ -20,7 +20,7 @@ const sum = (x, y) => x + y;
 let problem = 0;
 const ribbons = ["red", "blue", "red", "green", "red", "blue", "blue"];
 let cString = 'blue'
-const incrementIf = (count, string, _, __, cString) =>
+const incrementIf = (count, string) =>
   string === cString ? count + 1 : count;
 
 console.log(`${++problem}.`, reduceToValue(ribbons, incrementIf, 0, 'blue'));
@@ -132,3 +132,10 @@ console.log(`${++problem}.`,
 const record = ["small", "large", "medium", "small"];
 console.log(`${++problem}.`,
   reduceToValue(record, pushIfNotIncludes, []));
+
+// 15. Wildlife Sighting Count
+
+const animals = ["deer", "deer", "rabbit", "deer"];
+cString = 'deer';
+console.log(`${++problem}.`,
+  reduceToValue(animals, incrementIf, 0));
