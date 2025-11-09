@@ -119,8 +119,11 @@ const tunes = [["la", "la"],
 console.log(`${++problem}.`,
   doesSomeSatisfy(notes, (x) => x.includes('so')));
 
+// 13. Vegetable Crate Totals
+
 const weights = [[4, 6],
 [2, 3, 1],
 [5]];
-reduceNestedArray(weights, pushIfNotIncludes, []);
+console.log(`${++problem}.`,
+  reduceNestedArray(weights, sum, 0));
 
