@@ -76,9 +76,6 @@ console.log(`${++problem}.`, doesSomeSatisfy(notes, (x) => x.includes('do')));
 const temperatures = [[22, 23],
 [25, 24, 22],
 [29]];
-let result = temperatures.every(
-  (x) => x.every(x => x < 32)
-);
 console.log(`${++problem}.`, doesEverySatisfy(temperatures, (x) => x.every((x) => x < 32)));
 
 // 8. Fitness Tracker Miles
@@ -186,3 +183,26 @@ const pens = [[2, 3],
 [3, 2]];
 console.log(`${++problem}.`,
   pens.flatMap((x) => x).reduce(sum, 0));
+
+// words Starts With 'A'
+
+const sentences = [
+  'just a phrase',
+  'also another phrase',
+  'arbitrary phrase',
+  'An interesting phrase'
+];
+
+const pushIfStarts = (result, string) => {
+  if ((string.toLowerCase()).startsWith('a'))
+    result.push(string);
+  return result;
+}
+
+const wordsWithA = x => {
+  const splits = x.split(' ');
+  return splits.reduce(pushIfStarts, [])
+}
+
+const result = sentences.flatMap(wordsWithA);
+console.log(result)
