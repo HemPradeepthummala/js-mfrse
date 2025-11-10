@@ -267,3 +267,11 @@ const numbers = [[3, 4],
 [5, 2],
 [1]];
 console.log(`${++problem}.`, doesEverySatisfy(numbers, (x) => x.every((x) => x > 0)));
+
+// 30. Fruit Stand Weight Totals
+
+const fruitsWeigth = [[4, 3],
+[2],
+[3, 1]];
+console.log(`${++problem}.`,
+  fruitsWeigth.flatMap((x) => x).reduce(sum, 0));
