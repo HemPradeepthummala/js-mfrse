@@ -252,3 +252,11 @@ const stations = [["A", "B"],
 ["A"]];
 console.log(`${++problem}.`,
   stations.flatMap((x) => x).reduce(pushIfNotIncludes, []));
+
+// 28. Book Club Pages Read
+
+const pagesRead = [[12, 10],
+[5],
+[8, 7]];
+console.log(`${++problem}.`,
+  pagesRead.flatMap((x) => x).reduce(sum, 0));
