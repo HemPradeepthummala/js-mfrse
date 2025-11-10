@@ -261,9 +261,9 @@ const pagesRead = [[12, 10],
 console.log(`${++problem}.`,
   pagesRead.flatMap((x) => x).reduce(sum, 0));
 
-  // 29. Rainfall Data Check
+// 29. Rainfall Data Check
 
-const numbers =[[3, 4],
+const numbers = [[3, 4],
 [5, 2],
 [1]];
 console.log(`${++problem}.`, doesEverySatisfy(numbers, (x) => x.every((x) => x > 0)));
