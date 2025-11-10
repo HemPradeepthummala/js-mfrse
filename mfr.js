@@ -244,3 +244,11 @@ const repetations = [[10, 20],
 [15, 10]];
 console.log(`${++problem}.`,
   repetations.flatMap((x) => x).reduce(sum, 0));
+
+// 27. Train Station Announcements
+
+const stations = [["A", "B"],
+["B", "C"],
+["A"]];
+console.log(`${++problem}.`,
+  stations.flatMap((x) => x).reduce(pushIfNotIncludes, []));
