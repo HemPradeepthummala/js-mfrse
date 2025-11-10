@@ -223,9 +223,16 @@ console.log(`${++problem}.`,
 
 // 24. Ice Cream Orders
 
-const iceCreams= [["vanilla", "chocolate"],
+const iceCreams = [["vanilla", "chocolate"],
 ["strawberry"],
 ["chocolate"]];
 cString = 'chocolate';
 console.log(`${++problem}.`,
   iceCreams.flatMap((x) => x).reduce(incrementIf, 0));
+
+// 25. Flowers in Bouquets
+
+const flowers = [["rose", "lily"],
+["lily", "tulip"]];
+console.log(`${++problem}.`,
+  flowers.flatMap((x) => x).reduce(pushIfNotIncludes, []));
