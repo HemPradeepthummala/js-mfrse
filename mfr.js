@@ -275,3 +275,10 @@ const fruitsWeigth = [[4, 3],
 [3, 1]];
 console.log(`${++problem}.`,
   fruitsWeigth.flatMap((x) => x).reduce(sum, 0));
+
+// 31. School Snack List
+
+const snacks = [["idli", "vada"],
+["vada", "upma"]];
+console.log(`${++problem}.`,
+  snacks.flatMap((x) => x).reduce(pushIfNotIncludes, []));
