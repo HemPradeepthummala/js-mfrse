@@ -282,3 +282,11 @@ const snacks = [["idli", "vada"],
 ["vada", "upma"]];
 console.log(`${++problem}.`,
   snacks.flatMap((x) => x).reduce(pushIfNotIncludes, []));
+
+// 32. Photo Contest Entries
+
+const photos = [["sunset", "bird"],
+["river"],
+["sunset"]];
+console.log(`${++problem}.`,
+  photos.flatMap((x) => x).reduce(pushIfNotIncludes, []));
