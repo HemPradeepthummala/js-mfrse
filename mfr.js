@@ -236,3 +236,11 @@ const flowers = [["rose", "lily"],
 ["lily", "tulip"]];
 console.log(`${++problem}.`,
   flowers.flatMap((x) => x).reduce(pushIfNotIncludes, []));
+
+// 26. Morning Exercise Count
+
+const repetations = [[10, 20],
+[5],
+[15, 10]];
+console.log(`${++problem}.`,
+  repetations.flatMap((x) => x).reduce(sum, 0));
